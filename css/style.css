@@ -91,3 +91,8 @@ a {
   /* text-decoration: none; 
   で文字の下の下線を消すことができる*/
 }
+
+footer {
+  text-align: center;
+  font-size: 80%;
+}
