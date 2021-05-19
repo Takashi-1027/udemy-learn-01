@@ -36,6 +36,18 @@ header h1 {
 .description img{
   float: left;
   margin: 0 10px 10px 0;
+  /* 下記の記述はアニメーションを実行する際に必要な記述である */
+  transition-property: opacity; /* transitionの対象となるpropertyで今回は[.description img:hover]内にある[opacity]を対象としている。この[opacity]が調整したときにアニメーションが発動しますよという様になる。*/
+  transition-duration: 1s; /* アニメーションを行う時間になる */
+  transition-timing-function: ease; /* アニメーションのエフェクト */
+  transition-delay: 0s; /* アニメーションをするまでの待ち時間を表しており、今回はマウスカーソルが画像に重なったときに0s(秒)でアニメーションが発動するようになっている。 */
+}
+
+/* 下記の:hoverは擬似クラスと呼ばれる
+このクラスの意味はマウスカーソルを重ねた状態のことを言う
+opacityとは不透明度を表し、0.5とすることで少し透明になる。 */
+.description img:hover {
+  opacity: 0.5;
 }
 
 .information h1{
